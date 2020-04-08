@@ -23,7 +23,7 @@
 		p:prefix="/WEB-INF/jsp/" p:suffix=".jsp" />
 
 	<!-- 配置支持文件上传的Bean -->
-	<bean 
+	<bean id="multipartResolver"
 		class="org.springframework.web.multipart.commons.CommonsMultipartResolver" 
-		p:maxUploadSize="802400" p:defaultEncoding="utf-8"/>
+		p:maxUploadSize="999999" p:defaultEncoding="utf-8"/>
 </beans>
