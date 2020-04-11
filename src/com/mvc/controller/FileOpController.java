@@ -8,6 +8,7 @@ import java.util.UUID;
 
 import javax.servlet.http.HttpServletRequest;
 
+import org.apache.commons.io.FileUtils;
 import org.apache.commons.io.FilenameUtils;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -43,11 +44,11 @@ public class FileOpController {
 		System.out.println(docm);
 		// 3、获得文件保存的路径；
 		String docmSavePath = "E:/Workspace/Spring Tool Suite/SpringMVCUploadAndDownload/WebContent/WEB-INF/upload";
+		System.out.println(docmSavePath);
 		// 4、构建文件file对象；
 		File fi = new File(docmSavePath, docm);
 		// 5、通过工具类实现文件上传。
-//		FileUtils.copyInputStreamToFile(file.getInputStream(), fi);
-
+		FileUtils.copyInputStreamToFile(file.getInputStream(), fi);
 		return new ModelAndView("index");
 	}
 }
