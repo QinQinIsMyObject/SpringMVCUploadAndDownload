@@ -17,18 +17,14 @@
 	获取存放文件的物理路径；
 	创建文件实例；
 	写入文件。
-UUID 是 通用唯一识别码的缩写
-
 ## 3、说明
 ### （1）配置支持文件上传的Bean的Class位置为：
 	Maven Dependencies→spring-web-5.2.4.RELEASE.jar→org.springframework.web.multipart.commons.CommonsMultipartResolver.class
-
+### （2）上传文件失败
+	一般解决办法，看配置文件中的Bean是否缺失id。
 ## 4、报错
-
-出现：严重: Allocate exception for servlet [mvc]
-
-解决办法：web.xml中出错，可能为单词写错
-
+	出现：严重: Allocate exception for servlet [mvc]
+	解决办法：web.xml中出错，可能为单词写错
 ## 5、附加
 ### 依赖
 	spring-webmvc：https://mvnrepository.com/artifact/org.springframework/spring-webmvc
@@ -43,7 +39,6 @@ UUID 是 通用唯一识别码的缩写
 	<version>5.2.4.RELEASE</version>
 </dependency>
 ```
-
 ```
 <!-- commons-fileupload依赖 -->
 <!-- https://mvnrepository.com/artifact/commons-fileupload/commons-fileupload -->
@@ -53,4 +48,3 @@ UUID 是 通用唯一识别码的缩写
 	<version>1.4</version>
 </dependency>
 ```
-
