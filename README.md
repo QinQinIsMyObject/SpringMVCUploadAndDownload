@@ -22,6 +22,8 @@
 	Maven Dependencies→spring-web-5.2.4.RELEASE.jar→org.springframework.web.multipart.commons.CommonsMultipartResolver.class
 ### （2）上传文件失败
 	一般解决办法，看配置文件中的Bean是否缺失id。
+### （3）file一致
+	index.jsp中name=file中的file和FileOpController.java中的MultipartFile file中的file要保持一致。
 ## 4、报错
 	出现：严重: Allocate exception for servlet [mvc]
 	解决办法：web.xml中出错，可能为单词写错
